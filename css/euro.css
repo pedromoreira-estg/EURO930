@@ -1,0 +1,30 @@
+body {
+	background-color: yellow;
+	color: blue;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+div.key ul, div.key li  {
+	display: inline-block;
+	font-weight : bold;
+	font-size: larger;
+}
+
+div.key ul.numbers li {
+	color:yellow;
+	background-color:red;
+}
+
+div.key ul.stars li {
+	color:yellow;
+	background-color:navy;
+}
+
+div.key li {
+	border-radius : 10px;
+	text-align : center;
+	width : 4em;
+	height : 3ex;
+}
+
