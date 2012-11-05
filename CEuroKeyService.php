@@ -23,7 +23,4 @@ class CEuroKeyService {
 	}	
 }
 
-$temp = new CEuroKeyService();
-echo $temp->getAsJSON();
-
 ?>
