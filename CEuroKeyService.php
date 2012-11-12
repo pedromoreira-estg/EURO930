@@ -6,8 +6,8 @@ class CEuroKeyService {
 	public $status = 1;
 	public $data   = null;
 	
-	public function __construct( ){
-		$this->data = new CEuroKey();
+	public function __construct($n = CEuroKey::NN,$s = CEuroKey::NS){
+		$this->data = new CEuroKey($n,$s);
 	}
 	
 	public function getAsJSON() {

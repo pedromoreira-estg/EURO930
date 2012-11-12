@@ -1,0 +1,60 @@
+<html>
+	<head>
+	<title>
+		Chave do Euromilhões
+	</title>
+	<link rel="stylesheet" href="css/euro.css" />
+	<script src="jquery/jquery-1.8.2.min.js"></script>
+	<script>
+		
+		// ensure that we area going to start 
+		// just when the document is ready
+		$(document).ready(startKeys);
+		
+		function startKeys() {
+			// alert("ok");
+		
+		//jQuery.get( url [, data] [, success(data, textStatus, jqXHR)] [, dataType] )
+			$.get(
+				'http://localhost/SIR1213/EURO930/EuroKeyWS.php',
+				showKey);
+		}
+				
+		// success
+		function showKey(data) {
+			var keyJS = $.parseJSON(data);
+			var divKey= $("<div>").addClass("key");
+			
+			
+			var ln = $("<ul>").addClass("numbers");
+			var ls = $("<ul>").addClass("stars");
+			
+			divKey.append(ln);
+			divKey.append(ls);
+			
+			
+			var n;
+			for (var n=0; n < keyJS.data.numbers.length; n++) {
+				ln.append($("<li>").html(keyJS.data.numbers[n]));
+				//alert(li.html());
+			}
+			var s;
+			for (var s=0; s < keyJS.data.stars.length; s++) {
+				ls.append($("<li>").html(keyJS.data.numbers[s]));
+			}
+			
+			$('#keyContainer').append(divKey);
+			
+		}
+		
+		
+		
+	</script>
+	</head>
+	<body>
+		<h1>A Chave Vencedora</h1>
+		<div id="keyContainer">
+			
+		</div>
+	</body>
+</html>

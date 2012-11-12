@@ -1,6 +1,6 @@
 <?php
 
-$key = file_get_contents("http://alunos.estg.ipvc.pt/~pmoreira/EURO/EuroKeyWS.php");
+$key = file_get_contents("http://alunos.estg.ipvc.pt/~pmoreira/EURO/EuroKeyWS.php?ns=3");
 $answer = json_decode($key);
 
 //var_dump($answer);
